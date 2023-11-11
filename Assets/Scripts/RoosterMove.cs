@@ -8,6 +8,8 @@ public class RoosterMove : MonoBehaviour
     public float frequency = 1.0f;   // Frequency of the sine wave
     public float speed = 1.0f;       // Speed of the movement
 
+    public float phase = 0.0f;
+
     private Vector3 initialPosition; // Initial position of the object
 
     void Start()
@@ -20,7 +22,7 @@ public class RoosterMove : MonoBehaviour
     {
         // Calculate the new position based on the sine wave
         float x = initialPosition.x + amplitude*3 * Mathf.Sin(Time.time * frequency * speed);
-        float y = initialPosition.y + amplitude * Mathf.Sin(Time.time * frequency*5 * speed);
+        float y = initialPosition.y + amplitude * Mathf.Sin(Time.time * frequency*5 * speed + Mathf.PI*phase*2);
         float z = initialPosition.z;
 
         // Update the object's position
