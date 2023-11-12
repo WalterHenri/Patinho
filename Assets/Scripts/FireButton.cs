@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void OnButtonClick()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
         
+
+        // Your code to execute when the button is clicked
+        Debug.Log("Button Clicked!");
     }
 }
